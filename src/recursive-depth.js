@@ -1,6 +1,12 @@
+const hasNestedArray = (arr) => arr.some(item => Array.isArray(item));
 module.exports = class DepthCalculator {
-    calculateDepth(/* arr */) {
-        throw 'Not implemented';
-        // remove line with error and write your code here
+    calculateDepth(arr) {
+       // throw 'Not implemented';
+        let dep = 1;
+        if (hasNestedArray(arr)) {
+            const newArr = arr.reduce((acc, cur) => acc.concat(cur), []);
+            return depth + this.calculateDepth(newArr);
+        }
+        return depth;
     }
 };
