@@ -1,8 +1,9 @@
 module.exports = function createDreamTeam(members) {
   //throw 'Not implemented';
   let arr = [];
-  if (typeof(members) === 'object') {
-    members.flat().forEach((elem) => {
+  
+  if (Array.isArray(members)) {
+    members.forEach((elem) => {
       if (typeof(elem) === 'string') {
         elem = elem.trim();
         elem = elem.slice(-elem.length, -elem.length + 1).toUpperCase();
@@ -11,8 +12,9 @@ module.exports = function createDreamTeam(members) {
         return false;
       }  
     });
-    console.log(`arr sort: ${arr.sort().join('')}`);
+    //console.log(`arr sort: ${arr.sort().join('')}`);
     return arr.sort().join('');
 
-  } false;
+  } return false;
+  
 }
