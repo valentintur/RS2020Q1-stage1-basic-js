@@ -46,7 +46,7 @@ describe('Carbon dating', () => {
       assert.equal(dateSample('9'), 4224);
       assert.equal(dateSample('11'), 2565);
     });
-
+    
     it.optional('should handle floating-point numbers', () => {
       assert.equal(dateSample('3.142'), 12926);
       assert.equal(dateSample('1.1'), 21604);
